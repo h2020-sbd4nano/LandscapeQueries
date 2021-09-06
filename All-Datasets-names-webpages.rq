@@ -1,0 +1,6 @@
+PREFIX sbd:   <https://www.sbd4nano.eu/rdf/#>
+
+SELECT DISTINCT ?datasetname ?webpage WHERE 
+{?dataset a          sbd:Dataset ;
+          rdfs:label ?datasetname ;
+          foaf:page  ?webpage .}
