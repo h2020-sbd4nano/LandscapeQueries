@@ -1,6 +1,9 @@
 PREFIX sbd:   <https://www.sbd4nano.eu/rdf/#>
+PREFIX rdfs:   <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX foaf:   <http://xmlns.com/foaf/0.1/>
 
-SELECT DISTINCT ?datasetname ?webpage WHERE 
-{?dataset a          sbd:Dataset ;
-          rdfs:label ?datasetname ;
-          foaf:page  ?webpage .}
+SELECT DISTINCT ?datasetname ?webpage WHERE {
+  ?dataset a          sbd:Dataset ;
+           rdfs:label ?datasetname .
+  OPTIONAL { ?dataset foaf:page  ?webpage . }
+}
