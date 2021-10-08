@@ -1,4 +1,7 @@
 PREFIX sbd:   <https://www.sbd4nano.eu/rdf/#>
+PREFIX rdfs:   <http://www.w3.org/2000/01/rdf-schema#>
+
 SELECT ?datasetlabel WHERE {
-  ?dataset a sbd:Dataset ;rdfs:label ?datasetlabel.
+  ?dataset a sbd:Dataset ;
+           rdfs:label ?datasetlabel.
 }
